@@ -1,5 +1,6 @@
-# bolaget.io-sdk-go
+[![Build Status](https://travis-ci.org/larsha/bolaget.io-sdk-go.svg?branch=master)](https://travis-ci.org/larsha/bolaget.io-sdk-go)
 
+# bolaget.io-sdk-go
 
 ## Usage
 ```go
