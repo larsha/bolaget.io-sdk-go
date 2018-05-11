@@ -2,6 +2,7 @@ package sdk
 
 import (
 	"encoding/json"
+
 	"github.com/google/go-querystring/query"
 )
 
@@ -37,7 +38,7 @@ type Store struct {
 
 func GetStore(nr string) (Store, error) {
 	var data Store
-	url := URL + "/products/" + nr
+	url := URL + "/stores/" + nr
 	body, err := request(url)
 	if err != nil {
 		return data, err
