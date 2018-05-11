@@ -2,33 +2,36 @@ package sdk
 
 import (
 	"encoding/json"
+
 	"github.com/google/go-querystring/query"
 )
 
 type ProductQueryParams struct {
-	Limit         int     `url:"limit"`
-	Offset        int     `url:"offset"`
-	Ecological    bool    `url:"ecological"`
-	Koscher       bool    `url:"koscher"`
-	Ethical       bool    `url:"ethical"`
-	YearFrom      int     `url:"year_from"`
-	YearTo        int     `url:"year_to"`
-	PriceFrom     float64 `url:"price_from"`
-	VolumeFrom    float64 `url:"volume_from"`
-	VolumeTo      float64 `url:"volume_to"`
-	Assortment    string  `url:"assortment"`
-	Sort          string  `url:"sort"`
-	Name          string  `url:"name"`
-	Type          string  `url:"type"`
-	Style         string  `url:"style"`
-	Provider      string  `url:"provider"`
-	Producer      string  `url:"producer"`
-	Origin        string  `url:"origin"`
-	OriginCountry string  `url:"origin_country"`
-	Packagin      string  `url:"packaging"`
-	ProductGroup  string  `url:"product_group"`
-	Sealing       string  `url:"sealing"`
-	Search        string  `url:"search"`
+	Limit          int     `url:"limit"`
+	Offset         int     `url:"offset"`
+	Ecological     bool    `url:"ecological"`
+	Koscher        bool    `url:"koscher"`
+	Ethical        bool    `url:"ethical"`
+	YearFrom       int     `url:"year_from"`
+	YearTo         int     `url:"year_to"`
+	PriceFrom      float64 `url:"price_from"`
+	VolumeFrom     float64 `url:"volume_from"`
+	VolumeTo       float64 `url:"volume_to"`
+	Assortment     string  `url:"assortment"`
+	Sort           string  `url:"sort"`
+	Name           string  `url:"name"`
+	Type           string  `url:"type"`
+	Style          string  `url:"style"`
+	Provider       string  `url:"provider"`
+	Producer       string  `url:"producer"`
+	Origin         string  `url:"origin"`
+	OriginCountry  string  `url:"origin_country"`
+	Packagin       string  `url:"packaging"`
+	ProductGroup   string  `url:"product_group"`
+	SalesStartFrom string  `url:"sales_start_from"`
+	SalesStartTo   string  `url:"sales_start_to"`
+	Sealing        string  `url:"sealing"`
+	Search         string  `url:"search"`
 }
 
 type Price struct {
