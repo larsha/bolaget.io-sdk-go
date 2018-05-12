@@ -2,19 +2,28 @@
 
 # bolaget.io-sdk-go
 
-## Usage
+## Versions
+This SDK adheres to [Semantic Versioning](http://semver.org/spec/v2.0.0.html). And it will follow [bolaget.io](https://github.com/larsha/bolaget.io#versions) versions.
+
+| Version       | Linked to             |
+| ------------- |:---------------------:|
+| `>=1.0.0`     | https://bolaget.io/v1 |
+
+## Import
 ```go
 import (
   b "github.com/larsha/bolaget.io-sdk-go"
 )
 ```
 
-## Get products, query params available here https://github.com/larsha/bolaget.io
+## Get products
+Query params available here [bolaget.io](https://github.com/larsha/bolaget.io)
 ```go
 products, err := b.GetProducts(b.ProductQueryParams{Limit: 1})
 ```
 
-## Get stores, query params available here https://github.com/larsha/bolaget.io
+## Get stores
+Query params available here [bolaget.io](https://github.com/larsha/bolaget.io)
 ```go
 stores, err := b.GetStores(b.StoreQueryParams{Limit: 1})
 ```

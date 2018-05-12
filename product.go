@@ -6,6 +6,8 @@ import (
 	"github.com/google/go-querystring/query"
 )
 
+const productsUrl = "/products/"
+
 type ProductQueryParams struct {
 	Limit          int     `url:"limit"`
 	Offset         int     `url:"offset"`
@@ -70,7 +72,7 @@ type Product struct {
 
 func GetProduct(nr string) (Product, error) {
 	var data Product
-	url := URL + "/products/" + nr
+	url := URL + productsUrl + nr
 	body, err := request(url)
 	if err != nil {
 		return data, err
@@ -83,7 +85,7 @@ func GetProduct(nr string) (Product, error) {
 
 func GetProducts(p ProductQueryParams) ([]Product, error) {
 	v, _ := query.Values(p)
-	url := URL + "/products/?" + v.Encode()
+	url := URL + productsUrl + "?" + v.Encode()
 
 	body, err := request(url)
 	if err != nil {

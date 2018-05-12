@@ -1,13 +1,14 @@
 package sdk
 
 import (
-	"github.com/stretchr/testify/assert"
 	"reflect"
 	"testing"
+
+	"github.com/stretchr/testify/assert"
 )
 
 func TestGetStores(t *testing.T) {
-	stores, err := GetStores(StoreQueryParams{})
+	stores, err := GetStores(StoreQueryParams{Sort: "city:asc"})
 	rt := reflect.TypeOf(stores)
 
 	assert.Nil(t, err)
