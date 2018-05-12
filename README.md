@@ -7,7 +7,7 @@ This SDK adheres to [Semantic Versioning](http://semver.org/spec/v2.0.0.html). A
 
 | Version       | Linked to             |
 | ------------- |:---------------------:|
-| `>=1.0.0`     | https://bolaget.io/v1 |
+| `^1.0.0`      | https://bolaget.io/v1 |
 
 ## Import
 ```go
