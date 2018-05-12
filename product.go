@@ -15,6 +15,7 @@ type ProductQueryParams struct {
 	YearFrom       int     `url:"year_from"`
 	YearTo         int     `url:"year_to"`
 	PriceFrom      float64 `url:"price_from"`
+	PriceTo        float64 `url:"price_to"`
 	VolumeFrom     float64 `url:"volume_from"`
 	VolumeTo       float64 `url:"volume_to"`
 	Assortment     string  `url:"assortment"`
@@ -26,12 +27,12 @@ type ProductQueryParams struct {
 	Producer       string  `url:"producer"`
 	Origin         string  `url:"origin"`
 	OriginCountry  string  `url:"origin_country"`
-	Packagin       string  `url:"packaging"`
+	Packaging      string  `url:"packaging"`
 	ProductGroup   string  `url:"product_group"`
-	SalesStartFrom string  `url:"sales_start_from"`
-	SalesStartTo   string  `url:"sales_start_to"`
 	Sealing        string  `url:"sealing"`
 	Search         string  `url:"search"`
+	SalesStartFrom string  `url:"sales_start_from"`
+	SalesStartTo   string  `url:"sales_start_to"`
 }
 
 type Price struct {
