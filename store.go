@@ -6,6 +6,8 @@ import (
 	"github.com/google/go-querystring/query"
 )
 
+const storesUrl = "/stores/"
+
 type StoreQueryParams struct {
 	Limit   int    `url:"limit"`
 	Offset  int    `url:"offset"`
@@ -38,7 +40,7 @@ type Store struct {
 
 func GetStore(nr string) (Store, error) {
 	var data Store
-	url := URL + "/stores/" + nr
+	url := URL + storesUrl + nr
 	body, err := request(url)
 	if err != nil {
 		return data, err
@@ -51,7 +53,7 @@ func GetStore(nr string) (Store, error) {
 
 func GetStores(params StoreQueryParams) ([]Store, error) {
 	v, _ := query.Values(params)
-	url := URL + "/stores/?" + v.Encode()
+	url := URL + storesUrl + "?" + v.Encode()
 
 	body, err := request(url)
 	if err != nil {

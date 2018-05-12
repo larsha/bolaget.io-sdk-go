@@ -6,7 +6,7 @@ import (
 	"time"
 )
 
-const URL = "https://bolaget.io"
+const URL = "https://bolaget.io/v1"
 
 func request(url string) ([]byte, error) {
 	client := http.Client{
