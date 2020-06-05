@@ -21,6 +21,7 @@ type ProductQueryParams struct {
 	VolumeFrom     float64 `url:"volume_from"`
 	VolumeTo       float64 `url:"volume_to"`
 	Assortment     string  `url:"assortment"`
+	AssortmentText string  `url:"assortment_text"`
 	Sort           string  `url:"sort"`
 	Name           string  `url:"name"`
 	Type           string  `url:"type"`
@@ -35,6 +36,7 @@ type ProductQueryParams struct {
 	Search         string  `url:"search"`
 	SalesStartFrom string  `url:"sales_start_from"`
 	SalesStartTo   string  `url:"sales_start_to"`
+	Commodities    string  `url:"commodities"`
 }
 
 type Price struct {
@@ -59,15 +61,18 @@ type Product struct {
 	Packaging          string  `json:"packaging"`
 	Sealing            string  `json:"sealing"`
 	Origin             string  `json:"origin"`
+	OriginCountry      string  `json:"origin_country"`
 	Producer           string  `json:"producer"`
 	Provider           string  `json:"provider"`
 	Year               int     `json:"year"`
 	YearTested         string  `json:"year_tested"`
 	Alcohol            string  `json:"alcohol"`
 	Assortment         string  `json:"assortment"`
+	AssortmentText     string  `json:"assortment_text"`
 	Ecological         bool    `json:"ecological"`
 	Ethical            bool    `json:"ethical"`
 	Koscher            bool    `json:"koscher"`
+	Commodities        string  `json:"commodities"`
 }
 
 func GetProduct(nr string) (Product, error) {
